@@ -6,6 +6,7 @@
         <meta name="description" content="Delicious chicken recipes gathered thanks to The Odin Project Foundations Course.">
         <title>The Odin Recipe Project</title>
         <link href="https://api.fontshare.com/v2/css?f[]=bespoke-serif@400&f[]=tanker@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -22,15 +23,15 @@
                 <h2>Not really a recipe web page</h2>
                 <p>This page is the final assignment in the CSS Foundations section of <a href="https://www.theodinproject.com/paths/foundations/courses/foundations">The Odin Project Foundations course</a>.</p>
                 <p>The mission consists of styling a recipe page created in the <a href="https://www.theodinproject.com/paths/foundations/courses/foundations#html-foundations">HTML Foundations section</a>. It wasn't very glamorous then, and it's not particularly flashy now, but it gave me a chance to review concepts and try stuff out.</p>
-                <p>I chose a mix of classic chicken recipes: 
+                <p>I chose a mix of classic chicken recipes: </p>
                 <ul>
                     <li>A wholesome soup that cures colds, unbreaks hearts, warms the chest, and sells books.</li>
                     <li>A classic, both French and Russian, that no one knows the right spelling for. Ask a Stroganov if you see one.</li>
                     <li>One that made the list because my partner and I cooked it on our first-date.</li>
                     <li>One that is not a typo, but a tribute to Taylor Swift's favorite recipe, taught to me by my 15-year-old Swiftie.</li>
                 </ul> 
-                </p>I didn't write out the actual recipes I use for these dishes, or take real pictures. So you'll just have to trust me when I say mine look a bit better than these photos, and I can surely style chicken better than recipe pages.</p>
-                <p>Anyways, here they are:</p>
+                <br>
+               <p>Anyways, here they are:</p>
             </div>
         
             <div class="recipe-container">
@@ -56,19 +57,36 @@
                 </ul>
             </div>
             <div class="conclusion-text">
-                    <p>Anyone who ever tried it knows that approaching The Odin Project is surely a brave endeavor. Yet, strangely enough, all the recipes in this project involve chicken. In the wise words of Alanis Morrissette:
-                        <a href="https://www.youtube.com/watch?v=Jne9t8sHpUc">"Isn't it ironic, don't you think?"</a>.</p>
-                    <!--<div class="feedback-section">
-                        <p>And speaking of what you think, well, what <em>do</em> you think?</p>
-                        <button>ABOUT CHICKEN</button><button>ABOUT THE PAGE</button>
-                    </div>-->
+                <h3>Disclaimer:</h3> 
+                <p>I didn't write out the actual recipes I use for these dishes, or take real pictures. So you'll just have to trust me when I say mine look a bit better than these photos, and I can surely style chicken better than recipe pages.</p>
+                <p>Anyone who ever tried it knows that approaching The Odin Project is surely a brave endeavor. Yet, strangely enough, all the recipes in this project involve chicken. In the wise words of Alanis Morrissette:
+                    <a href="https://www.youtube.com/watch?v=Jne9t8sHpUc">"Isn't it ironic, don't you think?"</a>.</p></div>
+            <div class="feedback-section">
+                    <p>And speaking of what you think, well, what <em>do</em> you think? Click a button and let me know.</p>
+                    <div class="feedback-buttons">
+                            <button class="feedback-btn like" onclick="handleFeedback('like')">NOT BAD!
+                            </button>
+                            <button class="feedback-btn dislike" onclick="handleFeedback('dislike')">FEELS BAD
+                            </button>
+                    </div>
             </div>
         </main>
         <footer>
-            <a href="https://www.theodinproject.com/">Check out the odin project</a></li>
-            <p>© 2025 dat-copy-pat. What rights reserved?</p>
-            <p>Images sourced from respective recipe sites.</p>    
-            
+                <div class="social-icons">
+                        <a href="https://github.com/dat-copy-pat" target="_blank">
+                        <i class="fa-brands fa-square-github"></i> GitHub</a>
+                        <a href="https://www.freecodecamp.org/yourusername" target="_blank">
+                        <i class="fa-brands fa-free-code-camp"></i> FreeCodeCamp</a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
+                <a href="https://www.theodinproject.com/">THE ODIN PROJECT</a>
+                <p class="copyright">© 2025 dat-copy-pat. What rights reserved?</p>
         </footer>
+        <script>
+            function handleFeedback(type) {
+            alert(`Thanks for your ${type === 'like' ? 'positive' : 'honest'} feedback!`);
+}
+        </script>
     </body>
 </html>
