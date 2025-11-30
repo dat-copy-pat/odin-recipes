@@ -10,10 +10,9 @@ The project will be revisited later to add styling with CSS.
 
 **2.**
 Add styling with CSS using external CSS.
-Use color, background color, typography properties, etc. 
+Practice with color & typography properties, box model etc. 
 
-**THINGS TO DO**
-Get fonts fonts.google.com
-Get colors color.adobe.com 
+"Take some time to play around with the various properties to get a feel for what they do. For now, don’t worry at all about making it look good. This is just to practice and get used to writing CSS, not to make something to show off on your resume".
+
 
 
