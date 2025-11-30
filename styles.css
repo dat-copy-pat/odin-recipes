@@ -1,16 +1,3 @@
-/*Do this in this order*/
-/*Add light gray variable */
-/*Add carrousel*/
-/*style list in main-text section*/
-/*style footer links*/
-/* add buttons feedback  */
-/*social buttons */
-/*media queries a todo*/
-
-/*tama;os fuentes p sobre todo*/
-/*then focus on each recipe page*/
-
-
 :root {
     --color-eggshell: #eeecdb;
     --color-grey: #cecaca;
@@ -80,7 +67,8 @@ h1 {
 }
 
 .main-text,
-.conclusion-text {
+.conclusion-text,
+.recipe-text {
     padding: 5%;
 }
 
@@ -107,12 +95,14 @@ p {
     font-family: 'Bespoke Serif', serif;
  }
 
-.main-text ul {
+.main-text ul,
+.recipe-text ul {
     padding-left: 1rem; 
     margin-bottom: 1rem; 
 }
 
-.main-text ul li {
+.main-text ul li,
+.recipe-text ul li {
     line-height: 1.5;
     list-style-type: "★";
     font-size: 1rem;
@@ -120,9 +110,23 @@ p {
     margin-left: 1rem; 
 }
 
-.main-text ul li::marker {
+.main-text ul li::marker,
+.recipe-text ul li::marker {
     color: var(--color-orange); 
     font-size: 1.2em;               
+}
+
+.recipe-text ol li {
+    line-height: 1.5;
+    font-size: 1rem;
+    padding-left: 0.3rem; 
+    margin-left: 1.7rem; 
+}
+.recipe-text ol li::marker {
+    color: var(--color-orange); 
+    font-size: 1.1rem; 
+    font-weight: 900;
+              
 }
 
   /* RECIPE SECTION */
@@ -146,7 +150,7 @@ p {
 
 .recipe-list li {
     flex: 0 0 70vw; 
-    max-width: 600px; /* ADD THIS - prevents cards from getting huge */
+    max-width: 600px; 
           
     scroll-snap-align: center; 
     border-radius: 20px;
@@ -157,9 +161,10 @@ p {
     transition: transform 0.3s ease;
 }
 
-.recipe-list img {
+.recipe-list img,
+.recipe-box img {
   width: 90%;
-    max-height: 400px; /* ADD THIS - controls image size */
+    max-height: 400px; 
   object-fit: cover;
   border-radius: 20px;
   padding: 0.5em;
@@ -176,8 +181,18 @@ p {
     color: var(--color-black);
  }
 
+.recipe-box {
+       background: var(--color-orange);
+        margin: 20px auto; 
+        padding: 2.5%; 
+        border-radius: 30px;
+        text-align: center;
+        max-width: 100ch;
+        transition: transform 0.3s ease; 
 
-/*CONCLUSION AND FEEDBACK SECTION */
+ }
+
+/*NAV CONCLUSION AND FEEDBACK SECTION */
 .conclusion-text {
     max-width: 120ch; 
     margin-inline: auto;
@@ -236,6 +251,34 @@ h3 {
 .feedback-btn:hover {
     transform: scale(1.05);
 }
+
+nav {
+background: var(--color-orange);
+        margin: 20px auto; 
+        padding: 2.5%; 
+        border-radius: 30px;
+        text-align: center;
+        max-width: 100ch;
+        cursor: pointer;
+        transition: transform 0.3s ease; 
+}
+
+nav a {
+text-decoration: none;
+    font-family: 'Bespoke Serif', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 2px;
+    color: var(--color-black);
+ }
+
+ nav:hover{
+        background: var(--color-mustard);
+        transform: scale(1.05);
+
+
+ }
 
  /* FOOTER SECTION */
 
