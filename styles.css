@@ -1,0 +1,352 @@
+/*Do this in this order*/
+/*Add light gray variable */
+/*Add carrousel*/
+/*style list in main-text section*/
+/*style footer links*/
+/* add buttons feedback  */
+/*social buttons */
+/*media queries a todo*/
+
+/*tama;os fuentes p sobre todo*/
+/*then focus on each recipe page*/
+
+
+:root {
+    --color-eggshell: #eeecdb;
+    --color-grey: #cecaca;
+    --color-yellow: #fdc700;
+    --color-orange-dark: #d08700;
+    --color-red: #d9411e;
+    --color-black: #0d0d0d;
+    --color-orange: #d9751e;
+    --color-mustard: #d9aa1e;
+    --font-heading: 'Tanker', sans-serif;
+
+}  
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+
+body {
+    background-color: var(--color-eggshell);
+
+}
+ /* HEADER SECTION */
+/* still looks bad. */
+header {
+   width: 100%;
+   background-color: var(--color-orange-dark);
+}
+
+.top {
+    display: flex;             
+    align-items: center;
+    justify-content: space-between; /* CHANGED from center */
+    padding: 40px 20px; 
+    gap: 20px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 8vw, 4.5rem); 
+    text-align: center;
+    flex: 1;
+    line-height: 1;  
+    white-space: nowrap;        
+       
+}
+
+.img-top {
+  width: clamp(50px, 15vw, 120px); 
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* MAIN SECTION */
+
+.main-text {
+    margin-inline: auto;
+    max-width: 140ch; 
+
+}
+
+.main-text,
+.conclusion-text {
+    padding: 5%;
+}
+
+ h2 {
+    font-family: 'Bespoke Serif', serif;
+    font-size: 1.7em;
+    font-weight: 700;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+p {
+   font-size: 1.2em;
+   margin-bottom: 1.3rem;
+
+ }
+
+.main-text a,
+.conclusion-text a {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--color-orange-dark);
+    font-family: 'Bespoke Serif', serif;
+ }
+
+.main-text ul {
+    padding-left: 1rem; 
+    margin-bottom: 1rem; 
+}
+
+.main-text ul li {
+    line-height: 1.5;
+    list-style-type: "★";
+    font-size: 1rem;
+    padding-left: 0.5rem; 
+    margin-left: 1rem; 
+}
+
+.main-text ul li::marker {
+    color: var(--color-orange); 
+    font-size: 1.2em;               
+}
+
+  /* RECIPE SECTION */
+.recipe-container {
+    background-color: var(--color-orange);
+}
+
+.recipe-list {
+  display: flex;             
+  overflow-x: auto;          
+  scroll-snap-type: x mandatory; 
+  scroll-snap-align: center;
+  gap: 3em;                 
+  list-style: none;  
+  padding: 5rem 3rem; 
+}
+
+.recipe-list :hover { 
+    transform: scale(1.05); 
+}  
+
+.recipe-list li {
+    flex: 0 0 70vw; 
+    max-width: 600px; /* ADD THIS - prevents cards from getting huge */
+          
+    scroll-snap-align: center; 
+    border-radius: 20px;
+    background: var(--color-mustard);       
+    padding:0.5em;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.recipe-list img {
+  width: 90%;
+    max-height: 400px; /* ADD THIS - controls image size */
+  object-fit: cover;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+.recipe-list a {
+    text-decoration: none;
+    font-family: 'Bespoke Serif', serif;
+    font-weight: 900;
+    font-size: 1.9rem;
+    font-variant-caps: all-small-caps;
+    line-height: 2;
+    letter-spacing: 2px;
+    color: var(--color-black);
+ }
+
+
+/*CONCLUSION AND FEEDBACK SECTION */
+.conclusion-text {
+    max-width: 120ch; 
+    margin-inline: auto;
+}
+
+h3 {
+    font-family: 'Bespoke Serif', serif;
+    font-size: 1.3em;
+    margin: 1em 0px 1em 0;
+    font-weight: 900;
+    font-variant-caps: all-small-caps;
+    color: var(--color-orange);
+
+}
+
+.feedback-section {
+        background: var(--color-orange);
+        margin: 20px auto; 
+        padding: 2.5%; 
+        border-radius: 30px;
+        text-align: center;
+        max-width: 100ch;
+        transition: transform 0.3s ease; 
+
+
+}
+.feedback-section:hover {
+    transform: scale(1.05); 
+
+}
+
+.feedback-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feedback-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.feedback-btn.like {
+    background: var(--color-mustard);
+}
+
+.feedback-btn.dislike {
+    background: var(--color-grey);
+}
+
+.feedback-btn:hover {
+    transform: scale(1.05);
+}
+
+ /* FOOTER SECTION */
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-mustard);
+    font-size: 12px;
+    text-align: center;
+    padding-top:5%;
+    padding-bottom: 5%;
+}
+
+footer a{
+text-decoration: none;
+    font-family: 'Bespoke Serif', serif;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--color-eggshell);
+}
+
+footer a:hover{
+    display: inline-block; 
+     color: var(--color-mustard);
+     transform: scale(1.05);   
+
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: var(--color-eggshell);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-mustard);
+        transform: scale(1.05);
+
+}
+
+.social-icons i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+
+.copyright {
+    margin-top: 10px;
+    letter-spacing: 2px;
+
+}
+
+
+/*MEDIA QUERIES*/
+@media (max-width: 768px) {
+    .top {
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    h1 {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+    }
+    
+    .img-top {
+        width: clamp(40px, 10vw, 80px);
+    }
+    
+    p {
+        font-size: 1.1em;
+    }
+    
+    .recipe-list li {
+        flex: 0 0 85vw;
+    }
+    
+    .feedback-section {
+        margin: 30px 20px;
+    }
+    
+    .feedback-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+    
+    .main-text,
+    .conclusion-text,
+    .feedback-section {
+        padding: 8%;
+    }
+    
+    .recipe-list {
+        padding: 1.5rem 1rem;
+    }
+    
+    .recipe-list li {
+        flex: 0 0 90vw;
+    }
+    
+    .recipe-list a {
+        font-size: 1.5rem;
+    }
+}
